@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		18183A5023EC057700BF82A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18183A4E23EC057700BF82A0 /* Main.storyboard */; };
 		18183A5223EC057900BF82A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18183A5123EC057900BF82A0 /* Assets.xcassets */; };
 		18183A5523EC057900BF82A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18183A5323EC057900BF82A0 /* LaunchScreen.storyboard */; };
+		1889D6C223EEA3110070E109 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D6C123EEA3110070E109 /* WebViewVC.swift */; };
+		4C5179575C3A08968729539A /* Pods_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12B1B849BF12679DF975AE5 /* Pods_Network.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0116555F56BAAE0F55F68DF9 /* Pods-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.release.xcconfig"; path = "Target Support Files/Pods-Network/Pods-Network.release.xcconfig"; sourceTree = "<group>"; };
+		1575276BCD4EF5C4A340E1CC /* Pods-Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.debug.xcconfig"; path = "Target Support Files/Pods-Network/Pods-Network.debug.xcconfig"; sourceTree = "<group>"; };
 		18183A4523EC057700BF82A0 /* Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18183A4823EC057700BF82A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18183A4A23EC057700BF82A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,9 @@
 		18183A5123EC057900BF82A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18183A5423EC057900BF82A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18183A5623EC057900BF82A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18183A5C23EC059400BF82A0 /* Network-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Network-Bridging-Header.h"; sourceTree = "<group>"; };
+		1889D6C123EEA3110070E109 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		D12B1B849BF12679DF975AE5 /* Pods_Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5179575C3A08968729539A /* Pods_Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,9 @@
 			children = (
 				18183A4723EC057700BF82A0 /* Network */,
 				18183A4623EC057700BF82A0 /* Products */,
+				18183A5C23EC059400BF82A0 /* Network-Bridging-Header.h */,
+				615FCCCCD3D827AA0F24C28B /* Pods */,
+				5C1A21250FE87CED96CD7533 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,26 @@
 				18183A5123EC057900BF82A0 /* Assets.xcassets */,
 				18183A5323EC057900BF82A0 /* LaunchScreen.storyboard */,
 				18183A5623EC057900BF82A0 /* Info.plist */,
+				1889D6C123EEA3110070E109 /* WebViewVC.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5C1A21250FE87CED96CD7533 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D12B1B849BF12679DF975AE5 /* Pods_Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		615FCCCCD3D827AA0F24C28B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1575276BCD4EF5C4A340E1CC /* Pods-Network.debug.xcconfig */,
+				0116555F56BAAE0F55F68DF9 /* Pods-Network.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18183A5923EC057900BF82A0 /* Build configuration list for PBXNativeTarget "Network" */;
 			buildPhases = (
+				E927A45C372699A99AC733E1 /* [CP] Check Pods Manifest.lock */,
 				18183A4123EC057700BF82A0 /* Sources */,
 				18183A4223EC057700BF82A0 /* Frameworks */,
 				18183A4323EC057700BF82A0 /* Resources */,
+				6265C0B4C1536FB2C94C2248 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +130,7 @@
 				TargetAttributes = {
 					18183A4423EC057700BF82A0 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -133,11 +165,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6265C0B4C1536FB2C94C2248 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Network/Pods-Network-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Network/Pods-Network-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Network/Pods-Network-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E927A45C372699A99AC733E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Network-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18183A4123EC057700BF82A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1889D6C223EEA3110070E109 /* WebViewVC.swift in Sources */,
 				18183A4D23EC057700BF82A0 /* ViewController.swift in Sources */,
 				18183A4923EC057700BF82A0 /* AppDelegate.swift in Sources */,
 				18183A4B23EC057700BF82A0 /* SceneDelegate.swift in Sources */,
@@ -282,8 +357,10 @@
 		};
 		18183A5A23EC057900BF82A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1575276BCD4EF5C4A340E1CC /* Pods-Network.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
 				INFOPLIST_FILE = Network/Info.plist;
@@ -293,6 +370,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rehana.Network;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Network-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,8 +379,10 @@
 		};
 		18183A5B23EC057900BF82A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0116555F56BAAE0F55F68DF9 /* Pods-Network.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9L575X827;
 				INFOPLIST_FILE = Network/Info.plist;
@@ -311,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rehana.Network;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Network-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

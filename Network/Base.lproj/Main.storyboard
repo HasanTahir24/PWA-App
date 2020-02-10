@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrN-wd-USh">
+                                <rect key="frame" x="19" y="247" width="337.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fI8-2A-7Nd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-0o-lav">
+                                <rect key="frame" x="122.5" y="332" width="130" height="50"/>
+                                <color key="backgroundColor" red="0.98967251712328763" green="0.7712643326274613" blue="0.16968366972826979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A21-0m-ouw"/>
+                                    <constraint firstAttribute="width" constant="130" id="eZ8-cF-78j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="Open URL">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOpenUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R83-YI-dZd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YrN-wd-USh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A5G-Da-hfS"/>
+                            <constraint firstItem="YrN-wd-USh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="Su5-5H-ifB"/>
+                            <constraint firstItem="Lup-0o-lav" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lSp-hH-etD"/>
+                            <constraint firstItem="Lup-0o-lav" firstAttribute="top" secondItem="YrN-wd-USh" secondAttribute="bottom" constant="45" id="sqt-b4-Xan"/>
+                            <constraint firstItem="YrN-wd-USh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="uym-Mu-now"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tfURL" destination="YrN-wd-USh" id="ORq-21-tvx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60" y="75"/>
+        </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="JqB-et-VqB">
+            <objects>
+                <viewController storyboardIdentifier="WebView" id="axc-of-94n" customClass="WebViewVC" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8iJ-pZ-A2o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiX-mr-xOL">
+                                <rect key="frame" x="243" y="20" width="116" height="30"/>
+                                <state key="normal" title="Take ScreenShot"/>
+                                <connections>
+                                    <action selector="btnScreenShot:" destination="axc-of-94n" eventType="touchUpInside" id="bri-Al-lrV"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3I7-Gp-FPt">
+                                <rect key="frame" x="32" y="103" width="311" height="544"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9ah-f1-oJG" firstAttribute="bottom" secondItem="3I7-Gp-FPt" secondAttribute="bottom" constant="20" id="0n6-vs-LHF"/>
+                            <constraint firstItem="9ah-f1-oJG" firstAttribute="trailing" secondItem="3I7-Gp-FPt" secondAttribute="trailing" constant="32" id="RrC-Qa-TlC"/>
+                            <constraint firstItem="3I7-Gp-FPt" firstAttribute="leading" secondItem="9ah-f1-oJG" secondAttribute="leading" constant="32" id="ao4-tI-Che"/>
+                            <constraint firstItem="9ah-f1-oJG" firstAttribute="trailing" secondItem="OiX-mr-xOL" secondAttribute="trailing" constant="16" id="buo-NZ-Y15"/>
+                            <constraint firstItem="OiX-mr-xOL" firstAttribute="top" secondItem="9ah-f1-oJG" secondAttribute="top" constant="20" id="kAE-mu-vYq"/>
+                            <constraint firstItem="3I7-Gp-FPt" firstAttribute="top" secondItem="OiX-mr-xOL" secondAttribute="bottom" constant="53" id="kXu-J8-OO4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9ah-f1-oJG"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="3I7-Gp-FPt" id="6hH-OX-JYV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XrV-WP-ed3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="75.112443778110944"/>
         </scene>
     </scenes>
 </document>

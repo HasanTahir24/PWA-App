@@ -1,0 +1,20 @@
+PODS:
+  - DeviceKit (2.3.0)
+  - FPSCounter (4.0.1)
+
+DEPENDENCIES:
+  - DeviceKit (~> 2.0)
+  - FPSCounter (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - DeviceKit
+    - FPSCounter
+
+SPEC CHECKSUMS:
+  DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
+  FPSCounter: 262ec30f9f5a2fd7843b593ea80016fece7c809c
+
+PODFILE CHECKSUM: d1d274be5550b1072feab873e48cb9c07a2f4cba
+
+COCOAPODS: 1.8.4
