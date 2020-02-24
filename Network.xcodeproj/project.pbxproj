@@ -13,6 +13,8 @@
 		18183A5023EC057700BF82A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18183A4E23EC057700BF82A0 /* Main.storyboard */; };
 		18183A5223EC057900BF82A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18183A5123EC057900BF82A0 /* Assets.xcassets */; };
 		18183A5523EC057900BF82A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18183A5323EC057900BF82A0 /* LaunchScreen.storyboard */; };
+		1834CF5F2403D9A600CA6A0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1834CF5E2403D9A600CA6A0E /* Constants.swift */; };
+		1834CF602403E77A00CA6A0E /* Injection.js in Resources */ = {isa = PBXBuildFile; fileRef = 1834CF5C2401463900CA6A0E /* Injection.js */; };
 		1889D6C223EEA3110070E109 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D6C123EEA3110070E109 /* WebViewVC.swift */; };
 		4C5179575C3A08968729539A /* Pods_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12B1B849BF12679DF975AE5 /* Pods_Network.framework */; };
 /* End PBXBuildFile section */
@@ -20,7 +22,7 @@
 /* Begin PBXFileReference section */
 		0116555F56BAAE0F55F68DF9 /* Pods-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.release.xcconfig"; path = "Target Support Files/Pods-Network/Pods-Network.release.xcconfig"; sourceTree = "<group>"; };
 		1575276BCD4EF5C4A340E1CC /* Pods-Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.debug.xcconfig"; path = "Target Support Files/Pods-Network/Pods-Network.debug.xcconfig"; sourceTree = "<group>"; };
-		18183A4523EC057700BF82A0 /* Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18183A4523EC057700BF82A0 /* Wallboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18183A4823EC057700BF82A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18183A4A23EC057700BF82A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18183A4C23EC057700BF82A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		18183A5423EC057900BF82A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18183A5623EC057900BF82A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18183A5C23EC059400BF82A0 /* Network-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Network-Bridging-Header.h"; sourceTree = "<group>"; };
+		1834CF5C2401463900CA6A0E /* Injection.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Injection.js; sourceTree = "<group>"; };
+		1834CF5E2403D9A600CA6A0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1889D6C123EEA3110070E109 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		D12B1B849BF12679DF975AE5 /* Pods_Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -59,7 +63,7 @@
 		18183A4623EC057700BF82A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18183A4523EC057700BF82A0 /* Network.app */,
+				18183A4523EC057700BF82A0 /* Wallboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +79,8 @@
 				18183A5323EC057900BF82A0 /* LaunchScreen.storyboard */,
 				18183A5623EC057900BF82A0 /* Info.plist */,
 				1889D6C123EEA3110070E109 /* WebViewVC.swift */,
+				1834CF5C2401463900CA6A0E /* Injection.js */,
+				1834CF5E2403D9A600CA6A0E /* Constants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -115,7 +121,7 @@
 			);
 			name = Network;
 			productName = Network;
-			productReference = 18183A4523EC057700BF82A0 /* Network.app */;
+			productReference = 18183A4523EC057700BF82A0 /* Wallboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1834CF602403E77A00CA6A0E /* Injection.js in Resources */,
 				18183A5523EC057900BF82A0 /* LaunchScreen.storyboard in Resources */,
 				18183A5223EC057900BF82A0 /* Assets.xcassets in Resources */,
 				18183A5023EC057700BF82A0 /* Main.storyboard in Resources */,
@@ -216,6 +223,7 @@
 				18183A4D23EC057700BF82A0 /* ViewController.swift in Sources */,
 				18183A4923EC057700BF82A0 /* AppDelegate.swift in Sources */,
 				18183A4B23EC057700BF82A0 /* SceneDelegate.swift in Sources */,
+				1834CF5F2403D9A600CA6A0E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +377,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rehana.Network;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wallboard;
 				SWIFT_OBJC_BRIDGING_HEADER = "Network-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -391,7 +399,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rehana.Network;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wallboard;
 				SWIFT_OBJC_BRIDGING_HEADER = "Network-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

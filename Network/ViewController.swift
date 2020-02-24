@@ -18,15 +18,21 @@ class ViewController: UIViewController {
     var result = [String]()
     
     @IBOutlet weak var tfURL: UITextField!
+    
+    
+    var webVC : WebViewVC! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        if let addr = getWiFiAddress() {
-//            print(addr)
-//        } else {
-//            print("No WiFi address")
-//        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        webVC = storyboard.instantiateViewController(withIdentifier: "WebView") as? WebViewVC
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        if Constants.shouldShowSecondScreen{
+            self.navigationController?.viewControllers = [webVC]
+        }
+        
         result = getIFAddresses()
         print(result)
         print(hostCPULoadInfo() as Any)
@@ -54,10 +60,10 @@ class ViewController: UIViewController {
         if urlResult == true{
             //let vc = WebViewVC()
             //self.present(vc, animated: true, completion: nil)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "WebView") as? WebViewVC
-            controller?.urlstring = tfURL.text!
-            self.present(controller!, animated: true, completion: nil)
+            
+            webVC.urlstring = tfURL.text!
+            Constants.shouldShowSecondScreen = true
+            self.navigationController?.pushViewController(webVC, animated: true)
         }
         else{
             let alert = UIAlertController(title: "ERROR", message: "The URL cannot be open", preferredStyle: .alert)
