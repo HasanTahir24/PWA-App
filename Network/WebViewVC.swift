@@ -17,12 +17,17 @@ class WebViewVC: UIViewController, WKNavigationDelegate , WKUIDelegate,WKScriptM
     @IBOutlet weak var backgroundView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       let config = WKWebViewConfiguration()
+       //let config = WKWebViewConfiguration()
 
-        let js = "window.IOS = {};"//getMyJavaScript()
-        let script = WKUserScript(source: js, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
-        config.userContentController.addUserScript(script)
-        //config.userContentController.add(self, name: "pwa")
+        let contentController = WKUserContentController()
+        let scriptSource = "window.IOS = {};"
+        let script = WKUserScript(source: scriptSource, injectionTime:.atDocumentStart, forMainFrameOnly: true)
+        contentController.addUserScript(script)
+        contentController.add(self, name: "pwa")
+
+        let config = WKWebViewConfiguration()
+        config.userContentController = contentController
+
         webView =  WKWebView(frame: view.bounds, configuration: config)
         webView.uiDelegate = self
         webView.navigationDelegate = self
@@ -52,7 +57,7 @@ class WebViewVC: UIViewController, WKNavigationDelegate , WKUIDelegate,WKScriptM
     }
 
     func getMyJavaScript() -> String {
-        if let filepath = Bundle.main.path(forResource: "Injection", ofType: "js") {
+        if let filepath = Bundle.main.path(forResource: "injection", ofType: "js") {
             do {
                 return try String(contentsOfFile: filepath)
             } catch {
@@ -67,7 +72,7 @@ class WebViewVC: UIViewController, WKNavigationDelegate , WKUIDelegate,WKScriptM
         if message.name  == "pwa"{
             guard let dict = message.body as? [String:Any] else{return}
             if dict["event"] as? String ?? "" == "reset"{
-                Constants.shouldShowSecondScreen = true
+                Constants.shouldShowSecondScreen = false
             }
         }
     }

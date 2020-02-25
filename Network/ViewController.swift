@@ -58,8 +58,6 @@ class ViewController: UIViewController {
         let urlResult = verifyUrl(urlString: tfURL.text)
         print(urlResult)
         if urlResult == true{
-            //let vc = WebViewVC()
-            //self.present(vc, animated: true, completion: nil)
             
             webVC.urlstring = tfURL.text!
             Constants.shouldShowSecondScreen = true
