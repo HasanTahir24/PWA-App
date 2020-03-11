@@ -376,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rehana.Network;
+				PRODUCT_BUNDLE_IDENTIFIER = wallboard;
 				PRODUCT_NAME = Wallboard;
 				SWIFT_OBJC_BRIDGING_HEADER = "Network-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -398,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rehana.Network;
+				PRODUCT_BUNDLE_IDENTIFIER = wallboard;
 				PRODUCT_NAME = Wallboard;
 				SWIFT_OBJC_BRIDGING_HEADER = "Network-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

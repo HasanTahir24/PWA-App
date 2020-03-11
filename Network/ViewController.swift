@@ -52,6 +52,8 @@ class ViewController: UIViewController {
        print("RAM : \(Double(ProcessInfo.processInfo.physicalMemory)/1073741824)")
 
         print(report_memory())
+        
+        
     }
     
     @IBAction func btnOpenUrl(_ sender: Any) {

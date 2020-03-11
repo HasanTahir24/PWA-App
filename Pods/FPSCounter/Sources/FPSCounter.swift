@@ -143,7 +143,7 @@ public class FPSCounter: NSObject {
         }
     }
 
-    private func notifyUpdateForElapsedTime(_ elapsedTime: CFAbsoluteTime) {
+     func notifyUpdateForElapsedTime(_ elapsedTime: CFAbsoluteTime) {
         let fps = Int(round(Double(self.numberOfFrames) / elapsedTime))
         self.delegate?.fpsCounter(self, didUpdateFramesPerSecond: fps)
     }
